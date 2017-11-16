@@ -1,0 +1,2 @@
+//USE THE BELOW AS TEMPLATE FOR FUNCTION FILES
+console.log("watching");
