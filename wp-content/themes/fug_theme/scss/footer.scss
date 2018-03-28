@@ -1,14 +1,62 @@
 @import "colors";
 
 .footer {
+	background: $darkBrown;
+	color:white;
 
 	.content {
-		justify-content: space-between;
+		flex-direction: column;
+		justify-content: flex-start;
 		align-items: flex-start;
+		padding-top:70px;
+		padding-bottom:60px;
 	}
 
-	a {
-		
+	li {
+		transition:color .3s;
+
+		&:hover {
+			color:$yellow;
+		}
+	}
+}
+
+.footer-titles {
+	width:100%;
+	height:auto;
+	max-height:160px;
+	text-align: center;
+
+	h2 {
+
+	}
+}
+
+.footer-image {
+	width:100%;
+	max-width:140px;
+	margin:0 auto 30px auto;
+
+	img {
+		width:100%;
+		height:auto;
+	}
+}
+
+.footer-contact {
+	width:100%;
+	text-align: center;
+}
+
+.footer-social {
+	margin-top:50px;
+	width:100%;
+	text-align: center;
+
+	li {
+		font-size:34px;
+		display: inline-block;
+		margin:0 1%;
 	}
 }
 
