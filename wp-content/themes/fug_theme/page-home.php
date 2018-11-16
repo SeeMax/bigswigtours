@@ -1,50 +1,34 @@
 <?php /* Template Name: Home */ get_header(); ?>
 <main class="home-page" id="home">
 	<?php while (have_posts()) : the_post(); ?>
-		<section class="tag-line-section">
-			<div class="tripadvisor-logo">
-				<a class="c-block-fill" target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g60880-d6776569-Reviews-Big_Swig_Tours-Anchorage_Alaska.html"></a>
-				<img src="<?php echo get_template_directory_uri(); ?>/img/old/TA-logo.svg">
-			</div>
-			<div class="content">
-		  	<?php the_field('hero_tagline');?>
-			</div>
-	  </section>
-
-		<section class="hero-section background-image-section"		
-      <?php 
-      	$image = get_field('hero_background_image'); 
-      	$size = 'large'; 
-      	$thumb = $image['sizes'][ $size ];
-      	if (!empty($image))
-      :?>
-        style='background-image: url("<?php echo $thumb; ?>");'
-    	<?php endif;?>
-    >
-
-    <div class="image-overlay-black"></div>
-		  <h1>
-		    <?php the_field('hero_headline');?>
-		  </h1>
-		  <h3>
-		  	<?php the_field('hero_cta');?>
-		  </h3>
-		  <div class="down-arrow">
-		  	<a class="c-block-fill" href="#tours"></a>
-		  	<img src="<?php echo get_template_directory_uri(); ?>/img/down-arrow.svg">
+		<section class="hero-section">
+			<div class="tag-line-section">
+				<div class="tripadvisor-logos">
+					<a class="c-block-fill" target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g60880-d6776569-Reviews-Big_Swig_Tours-Anchorage_Alaska.html"></a>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/TA-logo-17.svg">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/TA-logo-18.svg">
+				</div>
+				<div class="content">
+					<h3><?php the_field('hero_headline');?></h3>
+				</div>
+				<h4><a href="#tours"><?php the_field('hero_cta');?></a></h4>
 		  </div>
+			<video id="bgvid" playsinline autoplay muted loop poster="<?php echo get_template_directory_uri(); ?>/img/promo-vid-poster.png">
+				<source src="<?php echo get_template_directory_uri(); ?>/img/bigswig-promo.mp4">" type="video/mp4">
+			</video>
 		</section>
-	  
+
+
 	  <section class="tour-section" id="tours">
 	    <div class="content">
 	     	<?php get_template_part('partials/_tours-preview') ?>
 		  </div>
 		</section>
 
-		<section class="quote-section background-image-section"		
-      <?php 
-      	$image = get_field('quote_background_image'); 
-      	$size = 'large'; 
+		<section class="quote-section background-image-section"
+      <?php
+      	$image = get_field('quote_background_image');
+      	$size = 'large';
       	$thumb = $image['sizes'][ $size ];
       	if (!empty($image))
       :?>
@@ -79,10 +63,10 @@
 
 			<div class="content">
 				<h3><?php the_field('contact_headline');?></h3>
-				<ul class="">	      
+				<ul class="">
 					<h4>
 						<a href="tel:+1-<?php the_field('phone_number', 'options');?>">
-							<?php the_field('phone_number', 'options');?>	
+							<?php the_field('phone_number', 'options');?>
 						</a>
 					</h4>
 					<h4>
@@ -103,10 +87,10 @@
 			</div>
 		</section>
 
-		<section class="carousel-section background-image-section"		
-      <?php 
-      	$image = get_field('carousel_background_image'); 
-      	$size = 'large'; 
+		<section class="carousel-section background-image-section"
+      <?php
+      	$image = get_field('carousel_background_image');
+      	$size = 'large';
       	$thumb = $image['sizes'][ $size ];
       	if (!empty($image))
       :?>
@@ -142,10 +126,10 @@
 				</div>
 	    </div>
 		</section>
-		
-    
 
-  
+
+
+
 	<?php endwhile; ?>
 </main>
 <?php get_footer(); ?>

@@ -2,76 +2,134 @@
 
 .home-page {
 
-}
 
-.tag-line-section {
-	background: $yellow;
-	color:white;
-  font-size: 30px;
-	font-weight: 700; 
-	padding:4px 0;
 
-	.content {
-		padding-top:0;
-		padding-bottom:0;		
-		/*text-align:center;*/
-	}
-}
+	.hero-section {
+		padding:0px;
+		position: relative;
+		margin-bottom:56.25%;
 
-.tripadvisor-logo {
-	position: absolute;
-	top:0px;
-	right:0px;
-	width:auto;
-	height:auto;
-	padding:10px;
-	z-index: 11;
-	
-	background:$lightGrey;
-	box-shadow: 0px 6px 11px -1px rgba(0,0,0,0.37);
+		video {
+			position: absolute;
+		  top: 0;
+		  left: 0;
+			z-index:5;
+			object-fit: cover;
+		  width: 100vw;
+		  height: auto;
+		}
 
-	a {
-
+		.video-background-image {
+			position: absolute;
+		  top: 0;
+		  left: 0;
+			z-index:5;
+			background-size:cover;
+		  width: 100vw;
+		  height: auto;
+			margin-bottom:56.25%;
+		}
 	}
 
-	img {
-		width:80px;
+	.tag-line-section {
+		z-index:6;
+		position: absolute;
+		top:0;
+		left:0;
+		width:100%;
 		height:auto;
-	
+		background: rgba(244,185,19,.9);
+		color:white;
+		text-align: center;
+		padding:16px 0;
+
+		a {
+			text-decoration: underline;
+			color:white;
+			text-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+			font-weight:400;
+
+			&:hover {
+				color:$lightGrey;
+			}
+		}
+
+		h3 {
+			line-height: 1.2;
+		}
+
+		h4 {
+			position: absolute;
+			top:100%;
+			left:0;
+			width:100%;
+			height:auto;
+			margin-top:10px;
+		}
+
+		.content {
+			padding-top:0;
+			padding-bottom:0;
+			/*text-align:center;*/
+		}
 	}
-}
 
-.hero-section {
-	color:white;
-
-	h1 {
-		margin: 20px auto;
-	}
-
-	h3 {
-		margin:0 auto;
-		max-width:870px;
-	}
-}
-
-.down-arrow {	
-	border-radius:50%;
-	border:2px solid white;
-	width:65px;
-	height:65px;
-	margin:30px auto 0 auto;
-	padding-top:4px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	img {
-		width:68%;
+	.tripadvisor-logos {
+		position: absolute;
+		top:0px;
+		right:0px;
+		width:auto;
 		height:auto;
+		z-index: 11;
+		background:$lightGrey;
+
+
+		img {
+			box-shadow: 0px 5px 8px -1px rgba(0,0,0,0.2);
+			display: block;
+			width:110px;
+			height:auto;
+			padding:10px;
+		}
 	}
 }
 
- 
+// .hero-section {
+// 	position: absolute;
+// 	top:0;
+// 	left:0;
+// 	width:100%;
+// 	height:100%;
+// 	color:white;
+//
+// 	h1 {
+// 		margin: 20px auto;
+// 	}
+//
+// 	h3 {
+// 		margin:0 auto;
+// 		max-width:870px;
+// 	}
+// }
+//
+// .down-arrow {
+// 	border-radius:50%;
+// 	border:2px solid white;
+// 	width:65px;
+// 	height:65px;
+// 	margin:30px auto 0 auto;
+// 	padding-top:4px;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+//
+// 	img {
+// 		width:68%;
+// 		height:auto;
+// 	}
+// }
+
+
 .home-page .tour-section {
 	background:$yellow;
 
@@ -154,7 +212,7 @@
 			color:white;
 			line-height: 1.2;
 		}
-		
+
 
 		.tour-panel-two {
 			display: flex;
@@ -179,7 +237,7 @@
 			border-top:1px solid $lightGrey;
 			padding-top:15px;
 			font-size: 12px;
-			
+
 			.brewery-title {
 				color:$darkYellow;
 				text-transform: uppercase;
@@ -206,7 +264,7 @@
 				}
 
 				&:nth-last-of-type(1) {
-					
+
 					&:after {
 				 		content:"";
 					}
@@ -214,7 +272,7 @@
 			}
 		}
 
-	
+
 		.tour-panel-three {
 			display: flex;
 			flex-wrap:wrap;
@@ -236,22 +294,22 @@
 		}
 
 		.single-tour-time {
-			
+
 		}
-		
+
 		.tour-season {
 			font-weight:800;
 			text-transform: uppercase;
 		}
 
 		.tour-times {
-			
+
 		}
 
 		.tour-start {
-			
+
 		}
-	  
+
 	  .tour-days {
 
 	  }
@@ -271,7 +329,7 @@
 		}
 
 		.tour-duration {
-			
+
 		}
 
 		&:hover {
@@ -284,7 +342,7 @@
 			}
 		}
 	}
-      
+
 	.tour-links {
 		text-align: center;
 		margin-top:25px;
@@ -304,7 +362,7 @@
 .quote-section {
 	text-align: center;
 	color:white;
-	
+
 	.content {
 		width:350px;
 	}
@@ -445,6 +503,47 @@
 // 1024px And Below
 @media screen and (max-width: 1023px){
 
+	.home-page {
+
+		.hero-section {
+			margin-bottom:0%;
+
+			video {
+				position: relative;
+				display: block;
+			}
+		}
+
+		.tag-line-section {
+			background: $yellow;
+			position: relative;
+			padding:16px 0;
+			padding-top: 0px;
+			padding-right:80px;
+			text-align: left;
+
+			.content {
+				padding-top:16px;
+				padding-bottom:0px;
+			}
+
+			h4 {
+				text-align: center;
+			}
+
+			h3 {
+				font-size:26px;
+			}
+		}
+
+		.tripadvisor-logos {
+
+			img {
+				width:100px;
+			}
+		}
+	}
+
 	.home-page .tour-section .single-tour-container .tour-panel-one {
 		width:50%;
 	}
@@ -468,32 +567,37 @@
 // 767px And Below
 @media screen and (max-width: 767px){
 
-	.tag-line-section {
-		font-size: 16px;
-	}
+	.home-page {
 
-	.tripadvisor-logo {
-		padding:4px;
-	
-		img {
-			width:30px;
-			height:auto;
+		.tag-line-section {
+			padding-right:50px;
+
+			h4 {
+				text-align: center;
+			}
+		}
+
+		.tripadvisor-logos {
+
+			img {
+				width:60px;
+			}
 		}
 	}
 
-	.hero-section {
-		padding-left:25px;
-		padding-right:25px;
-		padding-top:20px;
-
-		h1 {
-			/*font-size:30px;*/
-		}
-
-		h3 {
-			font-size:16px;
-		}
-	}
+	// .hero-section {
+	// 	padding-left:25px;
+	// 	padding-right:25px;
+	// 	padding-top:20px;
+	//
+	// 	h1 {
+	// 		/*font-size:30px;*/
+	// 	}
+	//
+	// 	h3 {
+	// 		font-size:16px;
+	// 	}
+	// }
 
 	.down-arrow {
 		display: none;

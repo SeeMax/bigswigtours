@@ -4,6 +4,10 @@
 	background: $darkBrown;
 	color:white;
 
+	a {
+		color:white;
+	}
+
 	.content {
 		flex-direction: column;
 		justify-content: flex-start;
@@ -73,6 +77,6 @@
 @media screen and (max-width: 767px){
 
 	.footer {
-		
+
 	}
 }

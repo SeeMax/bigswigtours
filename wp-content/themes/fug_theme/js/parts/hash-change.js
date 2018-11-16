@@ -5,8 +5,8 @@ $(window).on('hashchange', function () {
   }
 });
 
-$(window).on('popstate', function(){
-	if ($('main').hasClass('home-page')) {
-		console.log("PopPopPop")
-	}
-});
+// $(window).on('popstate', function(){
+// 	if ($('main').hasClass('home-page')) {
+//
+// 	}
+// });

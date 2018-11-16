@@ -19,10 +19,10 @@ $(window).on('load', function() {
 				contactDuration = $(".contact-section").height() * 2,
 	      // Footer Variable
 	      footerLink = $(".footer-link"),
-	      footerDuration = $(".footer-social").height() * 1.5,
+	      footerDuration = $(".footer-social").height() * 10.5,
 	      // Universal Variables
 	      uniTime1 = 1,
-	      uniTime2 = .3,
+	      uniTime2 = 0.3,
 	      uniEase1 = Power4.easeOut,
 	      uniEase2 = Power4.easeIn,
 	      uniBackOut = Back.easeOut.config(1),
@@ -32,42 +32,42 @@ $(window).on('load', function() {
     				.set(contactLine, {drawSVG:"100% 0%"})
     				.set(singleTourContainer, {y:60, opacity:0})
 						.set($(".quote-section h3"), {opacity:0, y:-30})
-						.set($(".quote-section h4"), {opacity:0, y:-10}) 
+						.set($(".quote-section h4"), {opacity:0, y:-10})
 						.set($(".quote-section img"), {opacity:0, y:30})
-						.set($(".footer-social li:nth-of-type(1)"), {x:-50})	
-						.set($(".footer-social li:nth-of-type(2)"), {x:-30})	
-						.set($(".footer-social li:nth-of-type(3)"), {x:30})	
-						.set($(".footer-social li:nth-of-type(4)"), {x:50})	
+						.set($(".footer-social li:nth-of-type(1)"), {x:-50})
+						.set($(".footer-social li:nth-of-type(2)"), {x:-30})
+						.set($(".footer-social li:nth-of-type(3)"), {x:30})
+						.set($(".footer-social li:nth-of-type(4)"), {x:50});
 
-		headerTL.to(headerLogo, .3, {width:0, transformOrigin:"center center"}, "rollIn")
-						.to(headerWords, .3, {scale:.8, transformOrigin:"center center"}, "rollIn")
-						.to($('.header'), .3, {height:70}, "rollIn")
-						.to($('.tripadvisor-logo'), .3, {rotationY:-90, transformOrigin:"right top", transformPerspective:1800}, "rollIn")
+		headerTL.to(headerLogo, 0.3, {width:0, transformOrigin:"center center"}, "rollIn")
+						.to(headerWords, 0.3, {scale:0.8, transformOrigin:"center center"}, "rollIn")
+						.to($('.header'), 0.3, {height:70}, "rollIn")
+						.to($('.tripadvisor-logos'), 0.3, {rotationY:-90, transformOrigin:"right top", transformPerspective:1800}, "rollIn");
 
 
-		quoteTL.to($(".quote-section h3"), .5, {opacity:1, y:0, ease: uniBackOut},"quoteIn")
-						.to($(".quote-section h4"), .5, {opacity:1, y:0, ease: uniBackOut},"quoteIn")
-						.to($(".quote-section img"), .5, {opacity:1, y:0, ease: uniBackOut},"quoteIn")
+		quoteTL.to($(".quote-section h3"), 0.5, {opacity:1, y:0, ease: uniBackOut},"quoteIn")
+						.to($(".quote-section h4"), 0.5, {opacity:1, y:0, ease: uniBackOut},"quoteIn")
+						.to($(".quote-section img"), 0.5, {opacity:1, y:0, ease: uniBackOut},"quoteIn");
 
-		aboutTL.to($(".about-section h3"), .35, {scale:1.01, y:-5})
-						.to($(".about-section h3"), .15, {scale:1, y:0})
+		aboutTL.to($(".about-section h3"), 0.35, {scale:1.01, y:-5})
+						.to($(".about-section h3"), 0.15, {scale:1, y:0});
 
-						
+
 		contactTL.to(contactLine, 1, {drawSVG:"0% 0%"})
 						 .set(contactLine, {drawSVG:"100% 100%"})
-						 .to(contactLine, 1, {drawSVG:"0% 100%"})
+						 .to(contactLine, 1, {drawSVG:"0% 100%"});
 
-		footerTL.to($(".footer-social li"), .3, {x:0})				 
+		footerTL.to($(".footer-social li"), 0.3, {x:0});
 
-		var controller = new ScrollMagic.Controller();	
+		var controller = new ScrollMagic.Controller();
 		// Build Scene
 
 		$(singleTourContainer).each(function(){
 		    var currentTour = this,
 		    		tourTL = new TimelineMax();
 
-		    tourTL.to(currentTour, .4, {y:0, opacity:1, ease: uniBackOut});
-	    
+		    tourTL.to(currentTour, 0.4, {y:0, opacity:1, ease: uniBackOut});
+
 				var tourScene = new ScrollMagic.Scene({
 					triggerElement: currentTour,
 					triggerHook: 'onEnter',
@@ -81,19 +81,19 @@ $(window).on('load', function() {
 			duration: 300,
 			reverse: true,
 			offset: 10
-		}).setTween(headerTL)
+		}).setTween(headerTL);
 
 		var quoteScene = new ScrollMagic.Scene({
 			triggerElement: ".quote-section",
 			triggerHook: 'onCenter',
 			offset:100
-		}).setTween(quoteTL)
+		}).setTween(quoteTL);
 
 		var aboutScene = new ScrollMagic.Scene({
 			triggerElement: ".about-section h3",
 			triggerHook: 'onEnter',
 			offset:200
-		}).setTween(aboutTL)
+		}).setTween(aboutTL);
 
 		var contactScene = new ScrollMagic.Scene({
 			triggerElement: ".contact-section",
@@ -101,22 +101,22 @@ $(window).on('load', function() {
 			duration: contactDuration,
 			reverse: true,
 			offset: 200
-		}).setTween(contactTL)
+		}).setTween(contactTL);
 
 		var footerScene = new ScrollMagic.Scene({
 			triggerElement: ".footer-social",
 			triggerHook: 'onEnter',
 			duration: footerDuration,
 			reverse: true,
-		}).setTween(footerTL)
+		}).setTween(footerTL);
 
 		var Pinscene= new ScrollMagic.Scene({
-			
+
 		}).setPin('.header');
 
 		// ADD THE SCENES ABOVE TO THE SCROLLMAGIC CONTROLLER
 		controller.addScene([headerScene, contactScene, quoteScene, aboutScene, footerScene]);
-	}	
+	}
 });
 
 

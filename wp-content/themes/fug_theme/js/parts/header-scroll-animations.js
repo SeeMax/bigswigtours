@@ -7,7 +7,7 @@ $(window).on('load', function() {
   				aboutLink = $('a[href="#about"]').parent('li'),
   				homeLink = $( "a:contains('Home')").parent('li');
 
-  		var controller = new ScrollMagic.Controller();	
+  		var controller = new ScrollMagic.Controller();
   		// Build Scene
 
   		var tourLinkScene = new ScrollMagic.Scene({
@@ -17,7 +17,7 @@ $(window).on('load', function() {
           tourIn();
       }).on('leave', function () {
           homeIn();
-      })
+      });
 
       var aboutLinkScene = new ScrollMagic.Scene({
   			triggerElement: "#about",
@@ -26,18 +26,18 @@ $(window).on('load', function() {
           aboutIn();
       }).on('leave', function () {
           tourIn();
-      })
+      });
 
       var homeLinkScene = new ScrollMagic.Scene({
   			triggerElement: "#home",
   			reverse:true
   		}).on('enter', function () {
           homeIn();
-      })
+      });
 
   		// ADD THE SCENES ABOVE TO THE SCROLLMAGIC CONTROLLER
   		controller.addScene([tourLinkScene, aboutLinkScene, homeLinkScene]);
-  	
+
 
   	function homeIn() {
         history.pushState(null, null, '#home');
@@ -45,7 +45,7 @@ $(window).on('load', function() {
         menuItems.removeClass("active-menu");
         homeLink.removeClass("inactive-menu");
         homeLink.addClass("active-menu");
-     };
+     }
 
   	function tourIn() {
         history.pushState(null, null, '#tours');
@@ -53,7 +53,7 @@ $(window).on('load', function() {
         menuItems.removeClass("active-menu");
         tourLink.removeClass("inactive-menu");
         tourLink.addClass("active-menu");
-     };
+     }
 
      function aboutIn() {
         history.pushState(null, null, '#about');
@@ -61,6 +61,6 @@ $(window).on('load', function() {
         menuItems.removeClass("active-menu");
         aboutLink.removeClass("inactive-menu");
         aboutLink.addClass("active-menu");
-     };
+     }
   }
 });

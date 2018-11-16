@@ -13,9 +13,9 @@
 	.section {
 		padding-top: 0;
 	}
-	
+
 	.hero-section {
-		
+
 		.content {
 			justify-content: flex-start;
 			margin-top:34px;
@@ -28,13 +28,15 @@
 	}
 
 	h1 {
+		color:white;
 		max-width: 100%;
 		width:100%;
 		text-align: left;
 		margin:0;
-	} 
+	}
 
 	h4 {
+		color:white;
 		font-weight:400;
 		max-width: 750px;
 		margin:0;
@@ -95,11 +97,11 @@
 	}
 
 	.tour-details-section {
-		
+
 		width:100%;
 
 		.content {
-			
+
 		}
 
 		h3 {
@@ -140,7 +142,7 @@
 			}
 
 			span {
-				position: relative;	
+				position: relative;
 				z-index: 2;
 			}
 		}
@@ -160,12 +162,12 @@
 		margin-top:5px;
 	}
 
-	
+
 	.tour-season {
 		margin-top:15px;
 
 		span {
-			font-weight: 800;	
+			font-weight: 800;
 		}
 
 		&:nth-of-type(1) {
@@ -174,7 +176,7 @@
 	}
 
 	li.duration {
-		margin-top:15px;		
+		margin-top:15px;
 	}
 
 	.tour-duration {
@@ -186,7 +188,7 @@
 	.tour-pickup {
 
 		li {
-	
+
 			&:hover {
 
 				&:before {
@@ -194,7 +196,7 @@
 				}
 			}
 
-			a { 
+			a {
 				z-index: 3;
 			}
 		}
@@ -252,6 +254,7 @@
 			}
 
 			h4 {
+				color:black;
 				font-size:16px;
 
 				&:before {
@@ -265,16 +268,16 @@
 				}
 
 				span {
-					position: relative;	
+					position: relative;
 					z-index: 2;
 				}
 			}
 		}
-		  
+
 		.brewery_logo {
 			max-width:100px;
 			width:23%;
-			padding-right:2%;	
+			padding-right:2%;
 			height:auto;
 
 			img {
@@ -306,7 +309,7 @@
 		color:$darkGrey;
 
 		span {
-			font-weight:800; 
+			font-weight:800;
 		}
 
 		.content {
@@ -355,7 +358,7 @@
 
 		.tour-details-section {
 			padding-bottom: 0px;
-			
+
 			.content {
 				padding-left:0;
 				padding-right:0;
