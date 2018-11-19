@@ -14,7 +14,7 @@
 				<h4><a href="#tours"><?php the_field('hero_cta');?></a></h4>
 		  </div>
 			<video id="bgvid" playsinline autoplay muted loop poster="<?php echo get_template_directory_uri(); ?>/img/promo-vid-poster.png">
-				<source src="<?php echo get_template_directory_uri(); ?>/img/bigswig-promo.mp4">" type="video/mp4">
+				<source src="https://seemaxwork.s3.amazonaws.com/video/bigswig-promo.mp4" type="video/mp4">
 			</video>
 		</section>
 
