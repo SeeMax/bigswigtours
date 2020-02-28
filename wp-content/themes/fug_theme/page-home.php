@@ -5,8 +5,7 @@
 			<div class="tag-line-section">
 				<div class="tripadvisor-logos">
 					<a class="c-block-fill" target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g60880-d6776569-Reviews-Big_Swig_Tours-Anchorage_Alaska.html"></a>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/TA-logo-17.svg">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/TA-logo-18.svg">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/TA-logo-19.svg">
 				</div>
 				<div class="content">
 					<h3><?php the_field('hero_headline');?></h3>
@@ -48,7 +47,21 @@
 				<h2>About</h2>
 				<p><?php the_field('about_body_copy');?></p>
 				<h3><?php the_field('about_callout');?></h3>
-	    </div>
+				<?php if( have_rows('member_logos') ):?>
+					<div class="membership-logos">
+						<h3>Big Swig is a proud member of</h3>
+						<!-- <div class="hr-container">
+							<hr />
+						</div> -->
+						<?php while ( have_rows('member_logos') ) : the_row();?>
+							<?php $image = get_sub_field('single_member_logo');?>
+							<a class="single-members-logo" href="<?php the_sub_field('single_member_link');?>" target="_blank">
+								<img src="<?php echo $image['url'];?>" />
+							</a>
+						<?php endwhile;?>
+					</div>
+				<?php endif;?>
+			</div>
 		</section>
 
 		<section class="contact-section">

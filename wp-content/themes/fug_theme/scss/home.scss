@@ -78,18 +78,21 @@
 		position: absolute;
 		top:0px;
 		right:0px;
-		width:auto;
-		height:auto;
+		width:180px;
+		height:180px;
 		z-index: 11;
-		background:$lightGrey;
+		background:#f7f7f7;
+		border:1px solid white;
+		border-width:12px;
+		box-shadow:-5px 5px 5px -5px rgba(0,0,0,0.2);
 
 
 		img {
-			box-shadow: 0px 5px 8px -1px rgba(0,0,0,0.2);
+			box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.1);
 			display: block;
-			width:110px;
+			width:100%;
 			height:auto;
-			padding:10px;
+			padding:10px 8px 8px 8px;
 		}
 	}
 }
@@ -408,6 +411,52 @@
 		margin-top:40px;
 		max-width:660px;
 	}
+
+	.membership-logos {
+		width:100%;
+		height:auto;
+		margin-top:100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		flex-wrap: wrap;
+		border:6px solid black;
+
+		.hr-container {
+			width:100%;
+			height:auto;
+			margin-bottom:40px;
+		}
+
+		hr {
+			border: 0;
+      height:1px;
+      background:$yellow;
+			width:100px;
+			margin:0 auto;
+		}
+
+		h4, h3 {
+			color:white;
+			background: black;
+			max-width:100%;
+			width:100%;
+			margin:0;
+			padding:4px 30px 10px 30px;
+		}
+	}
+
+	.single-members-logo {
+		width:20%;
+		height:auto;
+
+		img {
+			padding:30px 20px;
+			width:100%;
+			height:auto;
+		}
+	}
 }
 
 
@@ -537,9 +586,12 @@
 		}
 
 		.tripadvisor-logos {
+			width:120px;
+			height:120px;
+			border-width:7px;
 
 			img {
-				width:100px;
+
 			}
 		}
 	}
@@ -560,7 +612,16 @@
 		background:$lightGrey;
 	}
 
+	.about-section {
 
+		.single-members-logo {
+			width:33.33%;
+
+			img {
+				padding:20px;
+			}
+		}
+	}
 }
 
 
@@ -578,9 +639,12 @@
 		}
 
 		.tripadvisor-logos {
+			width:74px;
+			height:74px;
+			border-width:4px;
 
 			img {
-				width:60px;
+				padding:5px;
 			}
 		}
 	}
@@ -656,6 +720,17 @@
 
 			&:nth-of-type(2) {
 				margin-top:100px;
+			}
+		}
+	}
+
+	.about-section {
+
+		.single-members-logo {
+			width:100%;
+
+			img {
+				padding:20px;
 			}
 		}
 	}
